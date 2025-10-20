@@ -1,0 +1,29 @@
+{
+  "extends": "../../tsconfig.node.json",
+  "compilerOptions": {
+    // "target": "ESNext",
+    // "module": "esnext",
+    // "moduleResolution": "bundler",
+    "experimentalDecorators": true,
+    "rewriteRelativeImportExtensions": true,
+    "erasableSyntaxOnly": true,
+    "baseUrl": "src",
+    // "rootDir": ".",
+    "types": ["node"],
+    "paths": {
+      "#app/*": ["./*"],
+      "#app/constants/*": ["./constants/*"],
+      "#app/generated/prisma/client/*": ["./generated/prisma/client/*"],
+      "#prisma/seed/*": ["../prisma/seed/*"]
+    }
+  },
+  "include": ["src/**/*", "prisma/seed/**/*"],
+  "exclude": ["node_modules", "dist"],
+  "ts-node": {
+    "experimentalSpecifierResolution": "node",
+    "experimentalResolver": true,
+    "transpileOnly": false,
+    "esm": true,
+    "logError": true
+  }
+}

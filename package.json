@@ -1,0 +1,31 @@
+{
+  "name": "@[PROJECT_NAME_SHORT]/workspace",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "pnpm": "10.17.1"
+  },
+  "type": "module",
+  "scripts": {
+    "setup": "rimraf -g **/node_modules pnpm-lock.yaml && pnpm install"
+  },
+  "devDependencies": {
+    "@eslint/css": "^0.13.0",
+    "@eslint/js": "^9.38.0",
+    "@eslint/json": "^0.13.2",
+    "@eslint/markdown": "^7.4.0",
+    "@fluentui/eslint-plugin-react-components": "0.1.2",
+    "@types/node": "^24.8.1",
+    "eslint": "^9.38.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-compiler": "19.1.0-rc.2",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "globals": "^16.4.0",
+    "rimraf": "^6.0.1",
+    "typescript-eslint": "^8.46.1"
+  },
+  "workspaces": [
+    "apps/*"
+  ]
+}

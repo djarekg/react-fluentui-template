@@ -1,0 +1,161 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "root"
+    },
+    {
+      "path": "apps"
+    }
+  ],
+  "settings": {
+    // "prettier.documentSelectors": [
+    //   "**/*.{css,html,js,mjs,json,md,scss,ts,tsx,jsx}"
+    // ],
+
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+
+    "npm.packageManager": "pnpm",
+
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "editor.lightbulb.enabled": "on",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.rulers": [100],
+    "editor.overviewRulerBorder": true,
+    "editor.experimentalWhitespaceRendering": "font",
+    "editor.renderWhitespace": "none",
+
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "editor.insertSpaces": true,
+
+    "eslint.validate": [
+      "javascript",
+      "typescript",
+      "json",
+      "jsonc",
+      "json5",
+      "html",
+      "css"
+    ],
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[prisma]": {
+      "editor.defaultFormatter": "Prisma.prisma"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[xml]": {
+      "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+
+    // "typescript.experimental.useTsgo": true,
+    "typescript.format.semicolons": "insert",
+    "javascript.preferences.importModuleSpecifier": "relative",
+    "javascript.preferences.importModuleSpecifierEnding": "index",
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.preferences.importModuleSpecifierEnding": "index",
+
+    // "typescript.preferences.importModuleSpecifier": "non-relative",
+    // "typescript.preferences.importModuleSpecifierEnding": "js",
+    // "javascript.preferences.importModuleSpecifier": "non-relative",
+    // "javascript.preferences.importModuleSpecifierEnding": "js",
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.reportStyleChecksAsWarnings": false,
+
+    "html.autoClosingTags": true,
+    "html.format.indentInnerHtml": true,
+    "html.format.maxPreserveNewLines": 1,
+
+    "files.watcherExclude": {
+      "**/routeTree.gen.ts": true
+    },
+    "files.readonlyInclude": {
+      "**/routeTree.gen.ts": true
+    },
+    "files.exclude": {
+      "**/.cache": true,
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "**/node_modules": false,
+      "**/.output": true
+    },
+    "search.exclude": {
+      "**/routeTree.gen.ts": true,
+      "**/.react-router": true,
+      "**/node_modules": true,
+      "**/.output": true,
+      "**/prisma/generated": true
+    },
+
+    "cSpell.words": [
+      "Camo",
+      "coor",
+      "Coor",
+      "customerid",
+      "dbaeumer",
+      "dotenv",
+      "fluentui",
+      "griffel",
+      "isbot",
+      "labelledby",
+      "lmdb",
+      "malva",
+      "msgpackr",
+      "ngeslint",
+      "ngplugin",
+      "ngsrc",
+      "ngtemplate",
+      "Stroustrup",
+      "Tsgo",
+      "tsquery",
+      "tsvector",
+      "XLARGE",
+      "XSMALL",
+      "XXLARGE"
+    ],
+
+    "workbench.editor.labelFormat": "medium",
+
+    // Maximum number of requests for the chat agent - Prevents AI agents from stopping mid-session
+    "chat.agent.maxRequests": 999
+  },
+  "extensions": {
+    "recommendations": [
+      "Prisma.prisma",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint"
+    ]
+  }
+}

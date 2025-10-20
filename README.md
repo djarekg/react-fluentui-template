@@ -1,2 +1,2 @@
-# react-fluentui-template
-This is a React with Fluent UI React template
+# night-sky
+React mono repo with a demo web app, component and core library and a Node.js API.
