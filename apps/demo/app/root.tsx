@@ -10,9 +10,13 @@ import {
 import { darkTheme } from '@/styles/theme.js';
 import { FluentProvider } from '@fluentui/react-components';
 import type { Route } from './+types/root';
-import './app.css';
 
 export const links: Route.LinksFunction = () => [
+  {
+    rel: 'icon',
+    type: 'image/svg+xml',
+    href: '/ghost.svg',
+  },
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
   {
     rel: 'preconnect',
@@ -23,11 +27,15 @@ export const links: Route.LinksFunction = () => [
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap',
   },
+  {
+    rel: 'stylesheet',
+    href: '/app/app.css',
+  },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,8 +44,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {/* Add insertion point for Fluent UI styles before the </head>. */}
         <meta name="fluentui-insertion-point" content="fluentui-insertion-point" />
       </head>
-      <body>
-        <FluentProvider theme={darkTheme}>{children}</FluentProvider>
+      <body suppressHydrationWarning>
+        <FluentProvider theme={darkTheme} className="app-main">
+          {children}
+        </FluentProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -45,8 +55,30 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+// const useStyles = makeStyles({
+//   colorBrandBackground: {
+//     backgroundColor: tokens.colorBrandBackground,
+//     color: tokens.colorNeutralForegroundOnBrand,
+//   },
+//   colorBrandBackground2: {
+//     backgroundColor: tokens.colorBrandBackground2,
+//     color: tokens.colorNeutralForeground2,
+//   },
+//   box: { padding: tokens.spacingHorizontalM },
+//   layout: {
+//     display: 'flex',
+//     gap: `${tokens.spacingHorizontalM} ${tokens.spacingVerticalM}`,
+//   },
+// });
+
 export default function App() {
-  return <Outlet />;
+  // const styles = useStyles();
+
+  return (
+    // <main className={styles.colorBrandBackground}>
+    <Outlet />
+    // </main>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

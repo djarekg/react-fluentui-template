@@ -1,7 +1,15 @@
 {
-  "extends": ["development"],
+  "extends": [
+    "development"
+  ],
   "hints": {
     "typescript-config/consistent-casing": "off",
     "typescript-config/strict": "off"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 140",
+    "not edge <= 138"
+  ]
 }
